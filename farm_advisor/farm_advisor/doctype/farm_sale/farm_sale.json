@@ -57,7 +57,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Batch",
-   "options": "Batch",
+   "options": "Livestock Batch",
    "reqd": 1
   },
   {
@@ -91,7 +91,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-20 15:03:01.731051",
+ "modified": "2024-02-20 17:06:54.254348",
  "modified_by": "Administrator",
  "module": "Farm Advisor",
  "name": "Farm Sale",
