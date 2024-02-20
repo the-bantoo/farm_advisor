@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-20 14:55:34.235723",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "quantity",
+  "column_break_grez",
+  "price",
+  "reduced",
+  "column_break_jyjd",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "column_break_grez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price"
+  },
+  {
+   "default": "0",
+   "fieldname": "reduced",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Reduced"
+  },
+  {
+   "fieldname": "column_break_jyjd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-20 15:00:29.133678",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Farm Sale Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

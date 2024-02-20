@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-18 17:48:06.118564",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "treatment",
+  "column_break_desk",
+  "dosage__qty",
+  "section_break_ooja",
+  "column_break_muuq",
+  "times_per_day",
+  "column_break_wspg",
+  "number_of_days",
+  "section_break_psfs",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "treatment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Treatment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_desk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ooja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dosage__qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Daily Dosage (Millilitres/Grams)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_muuq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_psfs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "default": "1",
+   "fieldname": "times_per_day",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Times Per Day",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "number_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wspg",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-20 14:16:00.119039",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Disease Treatment Prescribed",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

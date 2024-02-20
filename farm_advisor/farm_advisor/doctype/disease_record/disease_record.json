@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:DIESEASE-{start_date}-{##}",
+ "creation": "2024-02-18 17:35:51.864563",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "start_date",
+  "column_break_cvyz",
+  "disease_end_date",
+  "total_days",
+  "section_break_wheq",
+  "batch",
+  "symptoms",
+  "prescription_section",
+  "diagnosis",
+  "prescribed_treatment",
+  "treatment_entries_section",
+  "treatment_entries",
+  "section_break_awb3",
+  "column_break_uiry",
+  "progress",
+  "column_break_ikod",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_awb3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Disease Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cvyz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.total_days && doc.total_days > 0;",
+   "description": "Date of confirmation of disease cure",
+   "fieldname": "disease_end_date",
+   "fieldtype": "Date",
+   "label": "Disease End Date",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Total Days",
+   "no_copy": 1,
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wheq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Batch",
+   "options": "Livestock Batch",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Table MultiSelect",
+   "in_filter": 1,
+   "label": "Symptoms",
+   "no_copy": 1,
+   "options": "Symptoms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prescription_section",
+   "fieldtype": "Section Break",
+   "label": "Prescription"
+  },
+  {
+   "fieldname": "prescribed_treatment",
+   "fieldtype": "Table",
+   "label": "Prescribed Treatment",
+   "no_copy": 1,
+   "options": "Disease Treatment Prescribed"
+  },
+  {
+   "fieldname": "treatment_entries_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment Entries"
+  },
+  {
+   "fieldname": "treatment_entries",
+   "fieldtype": "Table",
+   "label": "Treatment Entries",
+   "no_copy": 1,
+   "options": "Treatment Entry"
+  },
+  {
+   "fieldname": "column_break_uiry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ikod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Symptomatic",
+   "fieldname": "progress",
+   "fieldtype": "Select",
+   "label": "Treatment Progress",
+   "options": "Symptomatic\nDiagnosis Confirmed\nOngoing Treatment\nResolved"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Diagnosis",
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-19 13:21:47.520338",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Disease Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Symptomic"
+  },
+  {
+   "color": "Pink",
+   "title": "Diagnosis Confirmed"
+  },
+  {
+   "color": "Orange",
+   "title": "Ongoing Treatment"
+  },
+  {
+   "color": "Green",
+   "title": "Resolved"
+  }
+ ],
+ "title_field": "diagnosis",
+ "track_changes": 1
+}

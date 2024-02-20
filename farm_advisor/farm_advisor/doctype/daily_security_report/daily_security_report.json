@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "format:SECURED on {MM}-{DD}-{YY} by {manager_name}",
+ "creation": "2024-02-19 11:21:15.399982",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_gwtu",
+  "date",
+  "column_break_pdaj",
+  "duty_manager",
+  "manager_name",
+  "summary_section",
+  "staff_on_patrol",
+  "areas_checked",
+  "no_issues",
+  "section_break_wjfq",
+  "report_details",
+  "section_break_mvju",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gwtu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Security Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pdaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "frappe.session.user",
+   "fieldname": "duty_manager",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Duty Manager",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "End of Security Shift Summary"
+  },
+  {
+   "fieldname": "areas_checked",
+   "fieldtype": "Table",
+   "label": "Areas Checked",
+   "options": "Security Check Area",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no_issues",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No Issues"
+  },
+  {
+   "fieldname": "section_break_wjfq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "staff_on_patrol",
+   "fieldtype": "Table MultiSelect",
+   "in_standard_filter": 1,
+   "label": "Staff on Patrol",
+   "options": "Staff",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_mvju",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "report_details",
+   "fieldtype": "Text",
+   "label": "Security Incidence Details",
+   "mandatory_depends_on": "eval: doc.no_issues === 1;",
+   "read_only_depends_on": "eval: doc.no_issues === 0;"
+  },
+  {
+   "fetch_from": "duty_manager.employee_name",
+   "fieldname": "manager_name",
+   "fieldtype": "Data",
+   "label": "Manager Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-19 12:40:52.710809",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Daily Security Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

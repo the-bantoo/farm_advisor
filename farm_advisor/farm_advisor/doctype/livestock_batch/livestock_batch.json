@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "autoname": "format:B{batch_number} ({stocking_date})",
+ "creation": "2024-02-18 18:12:51.663955",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "stocking_date",
+  "column_break_htct",
+  "quantity_added",
+  "section_break_utyf",
+  "column_break_hqig",
+  "batch_number",
+  "column_break_tcfh",
+  "livestock",
+  "section_break_istr",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Livestock Batch",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "livestock",
+   "fieldtype": "Link",
+   "label": "Livestock",
+   "options": "Livestock Type",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hqig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "stocking_date",
+   "fieldtype": "Date",
+   "label": "Stocking Date",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_added",
+   "fieldtype": "Int",
+   "label": "Quantity Added",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_istr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "batch_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Batch Number",
+   "no_copy": 1,
+   "options": "Symptom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_htct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_utyf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tcfh",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-19 13:17:38.864875",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Livestock Batch",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-02-18 18:09:16.196856",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "symptom"
+ ],
+ "fields": [
+  {
+   "fieldname": "symptom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Symptom",
+   "options": "Symptom"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-19 12:51:00.303959",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Symptoms",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

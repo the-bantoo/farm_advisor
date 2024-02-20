@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-19 11:26:54.478870",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_dbfq",
+  "area",
+  "column_break_fuaa",
+  "checked"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Area",
+   "options": "Security Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fuaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "checked",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "No Problems Found"
+  },
+  {
+   "fieldname": "column_break_dbfq",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-19 12:20:12.908500",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Security Check Area",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

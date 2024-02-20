@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-18 17:19:41.541937",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "time_of_mortality",
+  "section_break_tbuw",
+  "mortality_cause",
+  "column_break_ktud",
+  "disease",
+  "column_break_ktrh",
+  "disease_name",
+  "qty",
+  "section_break_ahjq",
+  "column_break_nevq",
+  "pod",
+  "column_break_kofp",
+  "temperature",
+  "section_break_qdae",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "mortality_cause",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mortality Cause",
+   "options": "Mortality Cause",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.mortality_cause === 'Disease'",
+   "fieldname": "column_break_ktud",
+   "fieldtype": "Column Break",
+   "read_only_depends_on": "eval: doc.mortality_cause === 'Disease'"
+  },
+  {
+   "columns": 3,
+   "fieldname": "disease",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Disease",
+   "mandatory_depends_on": "eval: doc.mortality_cause === 'Disease'",
+   "options": "Disease Record",
+   "read_only_depends_on": "eval: doc.mortality_cause !== 'Disease'",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "section_break_ahjq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nevq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "pod",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Person on Duty",
+   "options": "Employee",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "description": "E.g. enter 10 for anytime from 10:00 to 10:59",
+   "fieldname": "time_of_mortality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Time of Mortality (24HR)",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qdae",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_kofp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tbuw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Temperature",
+   "mandatory_depends_on": "eval: doc.mortality_cause === \"Low or High Temperature\";",
+   "read_only_depends_on": "eval: doc.mortality_cause !== \"Low or High Temperature\";"
+  },
+  {
+   "fieldname": "column_break_ktrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.mortality_cause !== 'Disease'",
+   "fetch_from": "disease.diagnosis",
+   "fieldname": "disease_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Disease Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-19 13:04:22.395059",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Mortality Entry Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

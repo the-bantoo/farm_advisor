@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:MORTALITIES-{batch}-{total_mortalities}-{MM}-{DD}",
+ "creation": "2024-02-18 17:02:33.574045",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date_section",
+  "date",
+  "column_break_pqqv",
+  "time",
+  "mortality_section",
+  "batch",
+  "column_break_ibtl",
+  "mortalities_section",
+  "mortalities",
+  "section_break_chwx",
+  "column_break_fjjx",
+  "column_break_ukpt",
+  "total_mortalities",
+  "section_break_rexx",
+  "column_break_qopm",
+  "column_break_frbf",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_chwx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mortality Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date_section",
+   "fieldtype": "Section Break",
+   "label": "Date"
+  },
+  {
+   "default": "now",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pqqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time of Report",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "mortality_section",
+   "fieldtype": "Section Break",
+   "label": "Mortality"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch",
+   "options": "Livestock Batch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ibtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "total_mortalities",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Mortalities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mortalities_section",
+   "fieldtype": "Section Break",
+   "label": "Mortalities"
+  },
+  {
+   "fieldname": "mortalities",
+   "fieldtype": "Table",
+   "label": "Mortalities",
+   "options": "Mortality Entry Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_fjjx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ukpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rexx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qopm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_frbf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-19 11:16:10.092995",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Mortality Entry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Agriculture User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Agriculture Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
