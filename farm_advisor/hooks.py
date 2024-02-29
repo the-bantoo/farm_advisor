@@ -252,6 +252,16 @@ fixtures = [
 				]
 			]
 		]
+	},
+    {
+		"dt": "Email Template",
+		"filters": [
+			[
+				"name", "in", [
+					"Deposit Rejected"
+				]
+			]
+		]
 	}
 ]
 

@@ -1,0 +1,12 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Email Template",
+  "modified": "2024-02-29 20:47:13.480619",
+  "name": "Deposit Rejected",
+  "response": "<div class=\"ql-editor read-mode\"><p>The deposit of {{ amount_to_deposit }} was rejected.</p><p><br></p><p>Please review the document and resubmit it. </p><p><br></p><p><a href=\"{{frappe.get_url(name)}}\" rel=\"noopener noreferrer\">{{ name }}</a></p></div>",
+  "response_html": "The deposit of {{ amount_to_deposit }} was rejected.\n\nPlease review the document and resubmit it. \n\n<a href=\"{{ frappe.get_url(name) }}\">{{ name }}</a>",
+  "subject": "Deposit Rejected for Sale {name} ",
+  "use_html": 1
+ }
+]
