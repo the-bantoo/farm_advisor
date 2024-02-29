@@ -14,9 +14,21 @@
   "section_break_jhmm",
   "sales_items",
   "section_break_nxty",
-  "amended_from",
+  "column_break_acfj",
   "column_break_wtnd",
-  "total"
+  "total",
+  "expenses_section",
+  "daily_expenses",
+  "section_break_bhng",
+  "column_break_mvxv",
+  "column_break_fare",
+  "total_expenses",
+  "deposit_amount_section",
+  "amount_to_deposit",
+  "column_break_hjls",
+  "amount_deposited",
+  "section_break_eesq",
+  "amended_from"
  ],
  "fields": [
   {
@@ -34,6 +46,7 @@
    "search_index": 1
   },
   {
+   "bold": 1,
    "default": "now",
    "fieldname": "date",
    "fieldtype": "Date",
@@ -45,6 +58,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -53,6 +67,7 @@
    "reqd": 1
   },
   {
+   "bold": 1,
    "fieldname": "batch",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -62,7 +77,8 @@
   },
   {
    "fieldname": "section_break_jhmm",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Sales"
   },
   {
    "fieldname": "sales_items",
@@ -73,7 +89,8 @@
   },
   {
    "fieldname": "section_break_nxty",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hide_border": 1
   },
   {
    "fieldname": "column_break_wtnd",
@@ -83,15 +100,78 @@
    "fieldname": "total",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Total",
+   "label": "Sales Total",
    "no_copy": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_acfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "section_break_bhng",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "column_break_mvxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fare",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "deposit_amount_section",
+   "fieldtype": "Section Break",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "amount_to_deposit",
+   "fieldtype": "Currency",
+   "label": "Amount To Deposit",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hjls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_deposited",
+   "fieldtype": "Currency",
+   "label": "Amount Deposited",
+   "no_copy": 1,
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_eesq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daily_expenses",
+   "fieldtype": "Table",
+   "label": "Daily Expenses",
+   "no_copy": 1,
+   "options": "Daily Expense"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-20 17:06:54.254348",
+ "modified": "2024-02-29 21:32:01.268574",
  "modified_by": "Administrator",
  "module": "Farm Advisor",
  "name": "Farm Sale",
@@ -113,7 +193,6 @@
   },
   {
    "amend": 1,
-   "cancel": 1,
    "create": 1,
    "email": 1,
    "export": 1,
@@ -122,12 +201,10 @@
    "report": 1,
    "role": "Agriculture Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
    "amend": 1,
-   "cancel": 1,
    "create": 1,
    "email": 1,
    "export": 1,
@@ -136,7 +213,49 @@
    "report": 1,
    "role": "Agriculture User",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Deposit Approver",
+   "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Deposit Approver",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Depositor",
+   "share": 1,
    "write": 1
   }
  ],

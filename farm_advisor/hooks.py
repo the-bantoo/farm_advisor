@@ -227,3 +227,31 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+	{
+		"dt": "Workflow State",
+		"filters": [
+			[
+				"name", "in", [
+					"Save Draft",
+					"Draft",
+					"Deposited",
+					"Submitted for Deposit",
+					"Deposit Accepted",
+					"Deposit Rejected"
+				]
+			]
+		]
+	},
+    {
+		"dt": "Workflow",
+		"filters": [
+			[
+				"name", "in", [
+					"Farm Sale Deposit"
+				]
+			]
+		]
+	}
+]
+
