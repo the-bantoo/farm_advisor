@@ -1,0 +1,43 @@
+{
+ "based_on": "date",
+ "chart_name": "Mortalities",
+ "chart_type": "Sum",
+ "color": "#ff0048",
+ "creation": "2024-03-01 09:48:35.932398",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Mortality Entry",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "last_synced_on": "2024-03-01 09:44:04.598130",
+ "modified": "2024-03-01 09:48:35.932398",
+ "modified_by": "Administrator",
+ "module": "Farm Advisor",
+ "name": "Mortalities",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "roles": [
+  {
+   "role": "Farm Owner"
+  },
+  {
+   "role": "Agriculture User"
+  },
+  {
+   "role": "Agriculture Manager"
+  }
+ ],
+ "source": "",
+ "time_interval": "Daily",
+ "timeseries": 1,
+ "timespan": "Last Month",
+ "type": "Line",
+ "use_report_chart": 0,
+ "value_based_on": "total_mortalities",
+ "y_axis": []
+}
