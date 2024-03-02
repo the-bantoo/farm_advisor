@@ -26,7 +26,7 @@ class FarmSale(Document):
 
 	def update_item_amount(self):
 		for item in self.sales_items:
-			if not item.quantity or item.price:
+			if not item.quantity or not item.price:
 				continue
 			item.amount = item.quantity * item.price
 
