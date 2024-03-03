@@ -50,6 +50,7 @@
    "default": "now",
    "fieldname": "date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date",
    "reqd": 1
   },
@@ -61,10 +62,9 @@
    "bold": 1,
    "fieldname": "customer",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Customer",
    "options": "Customer",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "bold": 1,
@@ -141,6 +141,7 @@
   {
    "fieldname": "amount_to_deposit",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Amount To Deposit",
    "no_copy": 1,
    "read_only": 1
@@ -153,8 +154,7 @@
    "fieldname": "amount_deposited",
    "fieldtype": "Currency",
    "label": "Amount Deposited",
-   "no_copy": 1,
-   "permlevel": 1
+   "no_copy": 1
   },
   {
    "fieldname": "section_break_eesq",
@@ -171,7 +171,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-29 21:32:01.268574",
+ "modified": "2024-03-03 13:55:26.446688",
  "modified_by": "Administrator",
  "module": "Farm Advisor",
  "name": "Farm Sale",
